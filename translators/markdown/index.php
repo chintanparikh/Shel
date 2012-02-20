@@ -10,7 +10,6 @@ include('markdown.php');
 		  <!--[if lt IE 9]>
 		    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"/script>
 		  <![endif]-->
-	<link rel="stylesheet" href="" />
 	<title>Hello</title><script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script><link rel="stylesheet" href="highlight.css">
 

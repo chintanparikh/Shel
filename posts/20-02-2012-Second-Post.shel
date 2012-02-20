@@ -1,0 +1,10 @@
+#My Second Post
+
+Just a sample second post.
+Here's another code snippet:
+
+	public function get($item)
+	{
+		$config = parse_ini_file('config/config.ini');
+		return $config[$item];
+	}

@@ -1,26 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<post>
-	<id>1</id>
-	<title>Hello</title>
-	<date>20-02-2012</date>
-	<post>
-		#Hello
+#Hello
 
-		Welcome to Shel, my super simple flat file blogging engine.
+Welcome to Shel, my super simple flat file blogging engine.
 
-		It currently only supports Markdown, but it is soon to support many more formats! It uses highlight.js for syntax highlighting!
+It currently only supports Markdown, but it is soon to support many more formats! It uses highlight.js for syntax highlighting!
 
-		##Example:
+##Example:
 
-		abstract class Model
+	abstract class Model
+	{
+		protected $load, $config;
+
+		function __construct(Load $load, Config $config)
 		{
-			protected $load, $config;
-
-			function __construct(Load $load, Config $config)
-			{
-				$this->load = $load;
-				$this->config = $config;
-			}
+			$this->load = $load;
+			$this->config = $config;
 		}
-	</post>
-</post>
+	}
