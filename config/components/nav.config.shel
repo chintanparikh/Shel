@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<nav>
+	<item>
+		<title>Hello</title>
+		<link>http://www.google.com</link>
+	</item>
+	<item>
+		<title>Some Title</title>
+		<link>http://www.google.com</link>
+	</item>
+</nav>
