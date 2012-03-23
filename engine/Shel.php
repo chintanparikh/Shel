@@ -3,23 +3,30 @@
 class Shel
 {
 	protected $config;
+	protected $router;
 
-	public function __construct($config)
+	public function __construct($config, $router)
 	{
 		$this->config = $config;
+		$this->router = $router;
 	}
 
 	public function start()
 	{
-		foreach ($this->getNav() as $item)
+		$this->dispatcher($this->router->dispatchCall());		
+	}
+
+	public function dispatcher($dispatch)
+	{
+		foreach ($dispatch['routes'] as $route=>$function)
 		{
-			print "<a href='{$item['link']}'>{$item['title']}</a>";
+			if (preg_replace($route, '', $dispatch['URI']) === '')
+			{
+				call_user_func($function);
+				break;
+			}
 		}
-		foreach ($this->getPosts() as $post)
-		{
-			print $this->translate($post['post']);
-		}
-		
+
 	}
 
 	public function getNav()
