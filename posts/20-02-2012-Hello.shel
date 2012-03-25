@@ -1,5 +1,3 @@
-#Hello
-
 Welcome to Shel, my super simple flat file blogging engine.
 
 It currently only supports Markdown, but it is soon to support many more formats! It uses highlight.js for syntax highlighting!

@@ -48,8 +48,9 @@ class Shel
 		usort($files, create_function('$b,$a', 'return filemtime($a) - filemtime($b);'));
 		foreach ($files as $key=>$post)
 		{
-			$posts[$key]['post'] = file_get_contents($post);
-			$posts[$key]['title'] = str_replace('-', ' ', substr($post, 11));
+			//$posts[$key]['link'] = 
+			$posts[$key]['post'] = preg_replace('/(#[^#])/', '#\1', file_get_contents($post));
+			$posts[$key]['title'] = str_replace('.shel', '', str_replace('-', ' ', substr($post, 16)));
 		}
 		return $posts;
 	}
