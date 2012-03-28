@@ -9,8 +9,8 @@ class Themer
 	protected $theme;
 
 	const THEME_PATH = 'themes/';
-	const HOME_PAGE = 'index.php';
-	const POST_PAGE ='';
+	const HOME_PAGE = 'home.php';
+	const POST_PAGE ='post.php';
 
 	public function __construct($config, $theme = null)
 	{
@@ -39,7 +39,7 @@ class Themer
 	public function theme($content, $post = false)
 	{
 		extract($content);
-		if (!false)
+		if (!$post)
 		{
 			include($this->getThemePath() . self::HOME_PAGE);
 		}

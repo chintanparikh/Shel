@@ -32,4 +32,6 @@ $router->bind('~.?~', function() use ($shel)
 {
 	print 'This matches every page.';
 });
+
+
 $shel->start();
