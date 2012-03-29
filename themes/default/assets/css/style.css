@@ -1,0 +1,180 @@
+body{
+	background: #f7f7f7;
+	width: 960px;
+	margin: 0 auto;
+}
+
+a{
+	text-decoration: none;
+}
+
+img a{
+	border: none;
+}
+
+header{
+	font-family: BebasNeue, Sans-Serif;
+	text-transform: uppercase;
+	color: #1f1f1f;
+	text-decoration: underline;
+	font: 10px;
+	margin-top: 35px;
+}
+
+nav, article{
+	clear: both;
+}
+
+nav ul li{
+	padding: 0;
+	margin-top: 15px;
+	float: left;
+	margin-right: 15px;
+	text-transform: uppercase;
+	color: #1f1f1f;
+	margin-bottom: 15px;
+}
+
+nav ul li a{
+	color: #3c3c3c;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+nav ul li a:hover{
+	background: #00ff84;
+	text-decoration: underline;
+}
+
+hr{
+	clear: both;
+	height: 5px;
+	background: url('../img/divider.png') repeat-x;
+	border: none;
+}
+
+.date-circle {
+	float: left;
+	width: 143px;
+	height: 143px;
+	background: #1f1f1f;
+	border-radius: 1000px;
+	-moz-border-radius: 1000px;
+	-webkit-border-radius: 1000px;
+	color: #ffffff;
+	font-family: BebasNeue, Sans-Serif;
+	text-align: center;
+	margin-top: 38px;
+	margin-bottom: 38px;
+}
+
+a .date-circle:hover{
+	color: #00ff84;
+}
+.date-circle .day{
+	display: block;
+	font-size: 70px;
+	margin-bottom: 15px;
+	line-height: 108px;
+}
+.date-circle .month-year{
+	display: block;
+	font-size: 30px;
+	margin-top: -40px;
+}
+
+.post{
+	margin-top: 38px;
+	float: left;
+	width: 760px;
+	margin-left: 54px;
+	font-family: Merriweather, Georgia, Serif;
+}
+
+
+.post h2{
+	color: #000000;
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.post h3{
+	color: #000000;
+	font-size: 17px;
+	margin-bottom: 30px;
+
+}
+
+.post h2 a{
+	color: #000000;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.post h2 a:hover{
+	text-decoration: underline;
+	background: #00ff84;
+}
+
+.post p{
+	font-size: 14px;
+	line-height: 25px;
+	margin-bottom: 30px;
+	color: #353535;
+}
+
+.post p a{
+	color: #353535;
+	text-decoration: underline;
+}
+
+.post a:hover{
+	background: #00ff84;
+}
+
+pre{
+	margin-bottom: 30px;
+}
+
+footer{
+	font-family: Merriweather;
+	float: right;
+	font-size: 10px;
+	line-height: 25px;
+	margin-bottom: 30px;
+	color: #353535;
+}
+
+footer a{
+	color: #353535;
+	text-decoration: underline;
+}
+
+footer a:hover{
+
+	background: #00ff84;
+}
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('fonts/bebasneue-webfont.eot');
+    src: url('fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bebasneue-webfont.woff') format('woff'),
+         url('fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('fonts/bebasneue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('fonts/merriweather-webfont.eot');
+    src: url('fonts/merriweather-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/merriweather-webfont.woff') format('woff'),
+         url('fonts/merriweather-webfont.ttf') format('truetype'),
+         url('fonts/merriweather-webfont.svg#MerriweatherRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

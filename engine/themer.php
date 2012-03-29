@@ -38,6 +38,7 @@ class Themer
 
 	public function theme($content, $post = false)
 	{
+		$assetPath = $this->getThemePath() . 'assets/'; 
 		extract($content);
 		if (!$post)
 		{

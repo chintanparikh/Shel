@@ -25,6 +25,7 @@ $router->bind('~/~', function() use ($shel, $themer)
 		$content['posts'][$key]['post'] = $shel->translate($post['post']);
 		$content['posts'][$key]['title'] = $post['title'];
 		$content['posts'][$key]['date'] = $post['date'];
+		$content['posts'][$key]['link'] = $post['link'];
 	}
 	$themer->theme($content, false);
 });
@@ -32,7 +33,7 @@ $router->bind('~/~', function() use ($shel, $themer)
 
 $router->bind('~.?~', function() use ($shel)
 {
-	print 'This matches every page.';
+	print '404 :(';
 });
 
 
