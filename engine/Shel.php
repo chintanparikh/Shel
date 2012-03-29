@@ -51,6 +51,11 @@ class Shel
 			//$posts[$key]['link'] = 
 			$posts[$key]['post'] = preg_replace('/(#[^#])/', '#\1', file_get_contents($post));
 			$posts[$key]['title'] = str_replace('.shel', '', str_replace('-', ' ', substr($post, 16)));
+			$date = substr($post, 6, 10);
+			$date = explode('-', $date);
+			$posts[$key]['date']['day'] = $date[0];
+			$posts[$key]['date']['month'] = date('F', mktime(0, 0, 0, $date[1]));
+			$posts[$key]['date']['year'] = $date[2];
 		}
 		return $posts;
 	}

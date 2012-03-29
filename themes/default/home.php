@@ -14,10 +14,11 @@
 	</ul>
 
 	<?php
-	foreach ($posts as $title=>$post)
+	foreach ($posts as $post)
 	{
-		print "<h2>{$title}</h2>";
-		print $post;
+		print "<h2>{$post['title']}</h2>";
+		print $post['post'];
+		print $post['date']['day'] . substr($post['date']['month'], 0, 3) . $post['date']['year'];
 	}
 	?>
 

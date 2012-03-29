@@ -22,7 +22,9 @@ $router->bind('~/~', function() use ($shel, $themer)
 	$content['nav'] = $shel->getNav();
 	foreach ($shel->getPosts() as $key=>$post)
 	{
-		$content['posts'][$post['title']] = $shel->translate($post['post']);
+		$content['posts'][$key]['post'] = $shel->translate($post['post']);
+		$content['posts'][$key]['title'] = $post['title'];
+		$content['posts'][$key]['date'] = $post['date'];
 	}
 	$themer->theme($content, false);
 });
