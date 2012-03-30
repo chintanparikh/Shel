@@ -25,4 +25,5 @@ This is easiest seen by taking a look inside /translators at the default Markdow
 * Exceptions + exception handling (currently no errors, etc are thrown)
 * Add support for comments (possibly via disqus)
 * Refactor the code (currently quite messy, it's a functioning first iteration)
+  * The monolithic Shel class needs to be removed and replaced with classes that make more sense
 * Add support for components/addons - navigation will be moved into a component
