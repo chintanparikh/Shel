@@ -25,7 +25,7 @@ hljs.addLineNumbers();</script>
 </head>
 <body>
 	<header>
-		<img src="<?php print $assetPath ?>img/logo.png" alt="Shel" id="logo"/>
+		<a href="<?php print $this->config->get('basepath'); ?>"><img src="<?php print $assetPath ?>img/logo.png" alt="Shel" id="logo"/></a>
 	</header>
 
 	<nav>

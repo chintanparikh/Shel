@@ -1,25 +1,20 @@
-<html>
-<head>
-	<title>Blog Title</title>
-</head>
-<body>
-	<h1>Shel! The super simple blogging engine!</h1>
-	<ul>
-		<?php
-		foreach ($nav as $navitem)
-		{
-			print "<li><a href='{$navitem['link']}'>{$navitem['title']}</a></li>";
-		}
-		?>
-	</ul>
+<?php include ($this->getThemePath() . 'inc/header.php');?>
 
-	<?php
-	foreach ($posts as $title=>$post)
-	{
-		print "<h2>{$title}</h2>";
-		print $post;
-	}
-	?>
+		<article class="blog-post">
+		<a href="<?php print $post['link']; ?>">
+			<div class="date-circle">
+					<time datetime="<?php print $post['date']['year'] . '-' . $post['date']['month'] . '-' . $post['date']['day'] ?>">
+					<span class="day"><?php print $post['date']['day'] ?></span>
+					<span class="month-year"><?php print substr($post['date']['month'], 0, 3) . ' ' . substr($post['date']['year'], 2, 4) ?></span>
+				</time>
+			</div>
+		</a>
 
-</body>
-</html>
+		<div class="post">
+			<h2><a href="<?php print $post['link']; ?>"><?php print $post['title']; ?></a></h2>
+			<?php print $post['post']; ?>
+			<hr />
+		</div>
+	
+<?php include ($this->getThemePath() . 'inc/footer.php'); ?>
+

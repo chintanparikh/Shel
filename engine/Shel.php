@@ -62,7 +62,17 @@ class Shel
 
 	public function getPost($filename)
 	{
-		return file_get_contents("posts/{$filename}.shel");
+		$post = array();
+		$post['post'] = file_get_contents("posts/{$filename}.shel");
+		$post['title'] = str_replace('-', ' ', substr($filename, 10));
+		$date = substr($filename, 0, 10);
+		$date = explode('-', $date);
+		$post['date']['day'] = $date[0];
+		$post['date']['month'] = date('F', mktime(0, 0, 0, $date[1]));
+		$post['date']['year'] = $date[2];
+		$post['link'] = $this->config->get('basepath') . '/' . str_replace('.shel', '', $filename);
+
+		return $post;
 	}
 
 	public function translate($post)

@@ -6,7 +6,7 @@
 class Router
 {
 	protected $config;
-	protected $URI;
+	public $URI;
 	protected static $routes;
 
 	public function __construct(Config $config, $URI = '')

@@ -30,8 +30,27 @@ $router->bind('~/~', function() use ($shel, $themer)
 	$themer->theme($content, false);
 });
 
+$router->bind('~/posts/.+~', function() use ($shel, $themer, $router, $config)
+{
+	$postName = str_replace('/posts/','', $router->URI);
+	if (file_exists('posts/' . $postName . '.shel'))
+	{
+		$post = $shel->getPost($postName);
+		$content = array();
+		$content['nav'] = $shel->getNav();
+		$content['post']['post'] = $shel->translate($post['post']);
+		$content['post']['title'] = ucwords($post['title']);
+		$content['post']['date'] = $post['date'];
+		$content['post']['link'] = $post['link'];
 
-$router->bind('~.?~', function() use ($shel)
+		$themer->theme($content, true);
+	}
+
+	//404
+
+});
+
+$router->bind('~.+~', function() use ($shel)
 {
 	print '404 :(';
 });
