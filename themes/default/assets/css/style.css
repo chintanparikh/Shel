@@ -91,6 +91,21 @@ a .date-circle:hover{
 	font-family: Merriweather, Georgia, Serif;
 }
 
+.post h1{
+	color: #000000;
+	font-size: 27px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.post h1 a{
+	color: #000000;
+	font-size: 27px;
+	font-weight: bold;
+}
+.post h1 a:hover{
+	text-decoration: underline;
+	background: #00ff84;
+}
 
 .post h2{
 	color: #000000;

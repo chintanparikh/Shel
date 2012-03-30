@@ -11,7 +11,7 @@
 		</a>
 
 		<div class="post">
-			<h2><a href="<?php print $post['link']; ?>"><?php print $post['title']; ?></a></h2>
+			<h1><a href="<?php print $post['link']; ?>"><?php print $post['title']; ?></a></h1>
 			<?php print $post['post']; ?>
 			<hr />
 		</div>
