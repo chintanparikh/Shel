@@ -13,6 +13,7 @@ By default, Shel comes with Markdown support. To get started, upload a post to /
 ##Creating a new translator
 A translator converts a post into HTML. All translators are stored in /translators and must implement the interface Translator (which just states that they must contain the public method translate). The structure of /translators is as follows:
 
+<span>
 /translators
 
   /translatorname
@@ -20,6 +21,7 @@ A translator converts a post into HTML. All translators are stored in /translato
     translatorname.php
 
   translator.php
+</span>
 
 This is easiest seen by taking a look inside /translators at the default Markdown translator.
 
