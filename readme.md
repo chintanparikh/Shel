@@ -27,3 +27,6 @@ This is easiest seen by taking a look inside /translators at the default Markdow
 * Refactor the code (currently quite messy, it's a functioning first iteration)
   * The monolithic Shel class needs to be removed and replaced with classes that make more sense
 * Add support for components/addons - navigation will be moved into a component
+
+##A note on comments on the source code
+Occasionally while looking through the source code, you'll see perl style comments. These comments are essentially a mini todo list inside the source code, so if you see them, feel free to fork and sort it out!
