@@ -18,7 +18,7 @@ class Config
 	/**
 	 * The location of the component directory (must be under the config directory)
 	 */
-	const COMPONENT_DIRECTORY = 'components/'
+	const COMPONENT_DIRECTORY = 'components/';
 
 	/**
 	 * The filename of the global config file (located inside the config directry)
@@ -40,7 +40,7 @@ class Config
 	public function getComponent($component)
 	{
 		$config = array();
-		$xml = simplexml_load_file((self::CONFIG_DIRECTORY . self::COMPONENT_DIRECTORY . $component . '.config.shel');
+		$xml = simplexml_load_file(self::CONFIG_DIRECTORY . self::COMPONENT_DIRECTORY . $component . '.config.shel');
 
 		$vars = get_object_vars($xml);
 		foreach ($vars as $key=>$value)
