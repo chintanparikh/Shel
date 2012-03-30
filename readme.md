@@ -13,23 +13,17 @@ By default, Shel comes with Markdown support. To get started, upload a post to /
 ##Creating a new translator
 A translator converts a post into HTML. All translators are stored in /translators and must implement the interface Translator (which just states that they must contain the public method translate). The structure of /translators is as follows:
 
-<span>
-/translators
+    /translators
+      /translatorname
+        translatorname.php
 
-  /translatorname
+      translator.php
 
-    translatorname.php
-
-  translator.php
-</span>
 
 This is easiest seen by taking a look inside /translators at the default Markdown translator.
 
 ##To do list (feel free to contribute!):
-Exceptions + exception handling (currently no errors, etc are thrown)
-
-Add support for comments (possibly via disqus)
-
-Refactor the code (currently quite messy, it's a functioning first interation)
-
-Add support for components/addons - navigation will be moved into a component
+*Exceptions + exception handling (currently no errors, etc are thrown)
+*Add support for comments (possibly via disqus)
+*Refactor the code (currently quite messy, it's a functioning first interation)
+*Add support for components/addons - navigation will be moved into a component
