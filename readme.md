@@ -6,6 +6,9 @@ Shel is an extremely simple and lightweight blogging platform with a few core pr
 
 Shel was heavily inspired by static site generators such as Jekyll. As a result, all posts are single page files. However, unlike static site generators, you don't need to run a program before uploading anything, you simply upload your file (in whichever format you prefer), suffix it with .shel, and Shel takes care of the rest.
 
+##Installation
+Clone this repository (or download and upload) to your webserver, and change the last two settings in /config/config.ini
+
 ##Usage
 
 By default, Shel comes with Markdown support. To get started, upload a post to /posts written in Markdown format. The filename should be structured as follows: date-title.shel. The date should be in the format DD-MM-YYYY. For example 20-02-2012-Hello.shel. Your post should be entirely content (don't include the title, that's done automatically based off the filename).
