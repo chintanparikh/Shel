@@ -34,7 +34,17 @@ class Shel
 	{
 		$files = glob('posts/*.shel');
 		// Ensure most recent post is on top
-		usort($files, create_function('$b,$a', 'return filemtime($a) - filemtime($b);'));
+		usort($files, function($b, $a) {
+			    $aTime = filectime($a);
+			    $bTime = filectime($b);
+			    if ($aTime < $bTime) {
+			        return -1;
+			    } elseif ($aTime > $bTime) {
+			        return 1;
+			    } else {
+			        return 0;
+			    }
+			});
 		foreach ($files as $key=>$post)
 		{
 			$posts[$key]['link'] = $this->config->get('basepath') . '/' . str_replace('.shel', '', $post);
