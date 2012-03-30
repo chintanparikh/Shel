@@ -91,6 +91,24 @@ a .date-circle:hover{
 	font-family: Merriweather, Georgia, Serif;
 }
 
+.post ul{
+	list-style-type: disc;
+	font-family: Merriweather, Georgia, Serif;
+	font-weight: normal;	
+	margin-bottom: 30px;
+}
+
+.post ul li{
+	font-size: 14px;
+	line-height: 25px;
+	color: #353535;
+}
+
+.post ul li ul{
+	margin-bottom: 0;
+	margin-left: 30px;
+}
+
 .post h1{
 	color: #000000;
 	font-size: 27px;

@@ -52,7 +52,7 @@ class Shel
 	public function getPost($filename)
 	{
 		$post = array();
-		$post['post'] = file_get_contents("posts/{$filename}.shel");
+		$post['post'] =  preg_replace('/(#[^#])/', '#\1', file_get_contents("posts/{$filename}.shel"));
 		$post['title'] = str_replace('-', ' ', substr($filename, 10));
 		$date = substr($filename, 0, 10);
 		$date = explode('-', $date);
