@@ -6,14 +6,16 @@
 include('engine/config.php');
 include('engine/router.php');
 include('engine/themer.php');
+include('engine/dispatcher.php');
 include('engine/Shel.php');
 
 /* Initiate the router, config and the main Shel engine */
 $config = new Config();
 $router = new Router($config);
 $themer = new Themer($config);
+$dispatcher = new Dispatcher();
 
-$shel = new Shel($config, $router);
+$shel = new Shel($config, $router, $dispatcher);
 
 /* Bind routes - maybe put this in it's own file (routes.php?) */
 $router->bind('~/~', function() use ($shel, $themer)

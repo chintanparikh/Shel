@@ -4,29 +4,18 @@ class Shel
 {
 	protected $config;
 	protected $router;
+	protected $dispatcher;
 
-	public function __construct($config, $router)
+	public function __construct($config, $router, $dispatcher)
 	{
 		$this->config = $config;
 		$this->router = $router;
+		$this->dispatcher = $dispatcher;
 	}
 
 	public function start()
 	{
-		$this->dispatcher($this->router->dispatchCall());		
-	}
-
-	public function dispatcher($dispatch)
-	{
-		foreach ($dispatch['routes'] as $route=>$function)
-		{
-			if (preg_replace($route, '', $dispatch['URI']) === '')
-			{
-				call_user_func($function);
-				break;
-			}
-		}
-
+		$this->dispatcher->dispatch($this->router->dispatchCall());		
 	}
 
 	public function getNav()
