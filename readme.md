@@ -22,10 +22,7 @@ A translator converts a post into HTML. All translators are stored in /translato
 This is easiest seen by taking a look inside /translators at the default Markdown translator.
 
 ##To do list (feel free to contribute!):
-*Exceptions + exception handling (currently no errors, etc are thrown)
-
-*Add support for comments (possibly via disqus)
-
-*Refactor the code (currently quite messy, it's a functioning first interation)
-
-*Add support for components/addons - navigation will be moved into a component
+* Exceptions + exception handling (currently no errors, etc are thrown)
+* Add support for comments (possibly via disqus)
+* Refactor the code (currently quite messy, it's a functioning first iteration)
+* Add support for components/addons - navigation will be moved into a component
