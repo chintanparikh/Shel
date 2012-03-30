@@ -27,7 +27,7 @@ $router->bind('~/~', function() use ($shel, $themer)
 		$content['posts'][$key]['date'] = $post['date'];
 		$content['posts'][$key]['link'] = $post['link'];
 	}
-	$themer->theme($content, false);
+	$themer->theme($content, 'home');
 });
 
 $router->bind('~/posts/.+~', function() use ($shel, $themer, $router, $config)
@@ -43,7 +43,7 @@ $router->bind('~/posts/.+~', function() use ($shel, $themer, $router, $config)
 		$content['post']['date'] = $post['date'];
 		$content['post']['link'] = $post['link'];
 
-		$themer->theme($content, true);
+		$themer->theme($content, 'post');
 	}
 
 	//404
