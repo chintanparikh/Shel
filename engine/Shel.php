@@ -74,13 +74,5 @@ class Shel
 		return $post;
 	}
 
-	public function translate($post)
-	{
-		require_once("translators/translator.php");
-		$translatorName = $this->config->get('translator');
-		require_once("translators/{$translatorName}/{$translatorName}.php");
-		$translator = new $translatorName;
-		return $translator->translate($post);
-	}
 }
 

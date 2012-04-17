@@ -50,7 +50,7 @@ define( 'MARKDOWNEXTRA_VERSION',  "1.2.3" ); # Wed 31 Dec 2008
 # Markdown Parser Class
 #
 
-class Markdown implements Translator{
+class Markdown implements BaseTranslator{
 
 	# Regex to match balanced [brackets].
 	# Needed to insert a maximum bracked depth while converting to PHP.

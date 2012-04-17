@@ -1,6 +1,6 @@
 <?php
 
-interface Translator
+interface BaseTranslator
 {
 	public function translate($text);
 }
