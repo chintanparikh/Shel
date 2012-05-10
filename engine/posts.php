@@ -29,6 +29,7 @@ class Posts
 	{
 		$post = array();
 		$post['post'] = file_get_contents(self::PATH_TO_POSTS . "/{$filename}.shel");
+		//Hello-World > Hello World
 		$post['title'] = str_replace('-', ' ', substr($filename, 10));
 		$date = substr($filename, 0, 10);
 		$date = explode('-', $date);

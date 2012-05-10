@@ -25,6 +25,7 @@ A translator converts a post into HTML. All translators are stored in /translato
 This is easiest seen by taking a look inside /translators at the default Markdown translator.
 
 ##To do list (feel free to contribute!):
+* Working caching system (cacher.php needs to be completely redone)
 * Exceptions + exception handling (currently no errors, etc are thrown)
 * Add support for comments (possibly via disqus)
 * Automatic testing (PHPUnit?)
